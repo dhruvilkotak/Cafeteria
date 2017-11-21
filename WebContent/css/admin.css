@@ -1,0 +1,37 @@
+@CHARSET "UTF-8";
+
+.container.col-md-12 {
+	padding: 2%;
+}
+
+.glyphicon.glyphicon-user.col-md-1 {
+	font-size: 5em;
+}
+
+.title-div {
+    float: left;
+    font-size: 3em;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.well {
+	line-height: 3em;
+	margin-top: 8%;
+	padding: 4%;
+}
+
+footer .row {
+	text-align: center;
+}
+
+header {
+	margin-top: 50px;
+}
+.ghost-on-hover-btn{
+    padding:0px;
+    margin-top: 2%;
+}
+select {
+    width: 210px;
+}

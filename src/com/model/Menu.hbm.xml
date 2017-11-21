@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.model">
+
+    <class name="Menu" table="menu">
+      <id name="index" column="index">
+            <generator class="increment"/>
+        </id>
+        <property name="itemId" type="integer" column="item_id"/>
+        <property name="srNo" type="integer" column="Sr_no"/><!-- 
+        <property name="cafeteriaName" column="CafetariaName"/> -->
+        <property name="itemName" type="string" column="item_name"/>
+        <property name="itemCategory" type="string" column="item_category"/>
+        <property name="itemDescription" type="string" column="item_description"/>
+        <property name="itemPrice" type="string" column="item_price"/>
+        <property name="itemImage" column="item_image"/>
+       	
+    </class>
+
+</hibernate-mapping>

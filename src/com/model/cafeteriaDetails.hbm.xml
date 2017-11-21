@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.model">
+
+    <class name="CafeteriaDetails" table="cafeteria_details">
+        <id name="srNo" column="Sr_no">
+        </id>
+        <property name="cafeteriaName" column="CafetariaName"/>
+        <property name="cafeteriaLocatiion" type="string" column="cafeteria_location"/>
+      
+    </class>
+
+</hibernate-mapping>
