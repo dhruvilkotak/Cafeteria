@@ -169,7 +169,11 @@ public class Controller extends HttpServlet {
 		{
 			String itemid=request.getParameter("itemid");
 			String qty=request.getParameter("qty");
-			/*String srNo=request.getParameter("srNo");
+if (services != null) {
+  services.updateCartItemQty(param1, param2, param3);
+} else {
+  // Handle the null case, possibly throw an exception or log an error
+}
 			*/if(!services.updateCartItemQty(itemid,qty,userid))
 			{
 				System.out.println("error");
