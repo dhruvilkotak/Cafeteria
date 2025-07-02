@@ -42,7 +42,12 @@ public class Controller extends HttpServlet {
 		if (session.getAttribute("user_id") == null)
 		{
 			session.setAttribute("cartItemList", null);
-			response.sendRedirect(request.getContextPath()+ "/login.jsp");
+if (order.getItems() != null) {
+    int size = order.getItems().size();
+    // continue processing
+} else {
+    // handle the null case appropriately
+}
 			return;
 		}
 		*/
