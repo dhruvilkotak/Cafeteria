@@ -167,6 +167,10 @@ public class Controller extends HttpServlet {
 		}
 		if (actionCode.equals("updateItemToCart"))
 		{
+// Ensure services is initialized
+if (services == null) {
+    services = new com.services.CafeteriaService();
+}
 			String itemid=request.getParameter("itemid");
 			String qty=request.getParameter("qty");
 			/*String srNo=request.getParameter("srNo");
