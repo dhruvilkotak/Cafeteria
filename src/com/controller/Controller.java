@@ -167,9 +167,12 @@ public class Controller extends HttpServlet {
 		}
 		if (actionCode.equals("updateItemToCart"))
 		{
-			String itemid=request.getParameter("itemid");
-			String qty=request.getParameter("qty");
-			/*String srNo=request.getParameter("srNo");
+public void processOrder(HttpServletRequest request, HttpServletResponse response) {
+    if (services == null) {
+        services = new com.services.CafeteriaService();
+    }
+    services.updateCartItemQty(request.getParameter("itemId"), request.getParameter("quantity"), request.getParameter("userId"));
+}
 			*/if(!services.updateCartItemQty(itemid,qty,userid))
 			{
 				System.out.println("error");
