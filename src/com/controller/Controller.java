@@ -157,6 +157,9 @@ public class Controller extends HttpServlet {
 				List<Menu> menuList=services.doGetMenuListItems(menu);
 				request.setAttribute("cafeteriaList", cafeteriaList);
 				request.setAttribute("menuItemList", menuList);
+if (services == null) {
+    services = new com.services.CafeteriaService();
+}
 				List<CartItemList> cartitemLists=getCartList(userid,services);
 				session.setAttribute("cartItemList", cartitemLists);
 				request.setAttribute("cafeName", cafeName);
