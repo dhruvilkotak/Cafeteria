@@ -39,7 +39,11 @@ public class Controller extends HttpServlet {
 		String menu=request.getParameter("menu");
 		/*
 		
-		if (session.getAttribute("user_id") == null)
+if (order != null) {
+    order.getItems();
+} else {
+    // Handle the null order case, possibly log or throw an exception
+}
 		{
 			session.setAttribute("cartItemList", null);
 			response.sendRedirect(request.getContextPath()+ "/login.jsp");
