@@ -84,7 +84,11 @@ public class Controller extends HttpServlet {
 		if (actionCode.equals("addItemToCart"))
 		{
 			Cart cart=new Cart();
-			cart.setItemId(Integer.parseInt(request.getParameter("itemId")));
+if (!response.isCommitted()) {
+    response.getWriter().write("Your response here");
+} else {
+    // Handle the case where the response is already committed
+}
 			cart.setQty(request.getParameter("qty"));
 			cart.setUserid(userid);
 			cart.setCafeteriaName(request.getParameter("cafeteriaName"));
